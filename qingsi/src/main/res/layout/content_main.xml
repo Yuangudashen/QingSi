@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.qingsi.qingsi.base.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/theme_bg" >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/radioButton_tuijian"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/buttom_navigation_tuijian"
+                android:gravity="top" />
+
+            <RadioButton
+                android:id="@+id/radioButton_siyu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/buttom_navigation_siyu"
+                android:gravity="top" />
+
+            <RadioButton
+                android:id="@+id/radioButton_fujin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/buttom_navigation_fujin"
+                android:gravity="top" />
+
+            <RadioButton
+                android:id="@+id/radioButton_wode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/buttom_navigation_wode"
+                android:gravity="top" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+
+</LinearLayout>
