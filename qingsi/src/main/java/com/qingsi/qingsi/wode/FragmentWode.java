@@ -6,17 +6,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import com.qingsi.qingsi.R;
 
 /**
  * Created by Administrator on 2016/10/3 0003.
  */
 public class FragmentWode extends Fragment {
+
+    View fragment_wode;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText("我的");
-        return textView;
+        fragment_wode = inflater.inflate(R.layout.fragment_wode, null);
+
+
+        return fragment_wode;
     }
 }
