@@ -37,7 +37,7 @@ public class MainActivity extends BaseActivity {
 
         fragment = new FragmentTuijian();
         load(fragment);
-
+        page_title.setText("推荐");
         RadioButton radioButton_tuijian = (RadioButton) findViewById(R.id.radioButton_tuijian);
         radioButton_tuijian.setChecked(true);
     }

@@ -12,15 +12,14 @@ import com.qingsi.qingsi.R;
 /**
  * Created by Administrator on 2016/10/5 0005.
  */
-public class FragmentMyMessage extends Fragment{
+public class FragmentQingsishi extends Fragment {
 
-    View fragment_mymessage;
+    View fragment_qingsishi;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        fragment_mymessage = inflater.inflate(R.layout.fragment_mymessage, container, false);
+        fragment_qingsishi = inflater.inflate(R.layout.fragment_qingsishi, container, false);
 
-
-        return fragment_mymessage;
+        return fragment_qingsishi;
     }
 }

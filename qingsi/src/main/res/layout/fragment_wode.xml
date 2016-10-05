@@ -10,16 +10,26 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/fragment_wode_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <include
-                android:id="@+id/fragment_wode_layout"
-                layout="@layout/fragment_wode_page"/>
+        </LinearLayout>
+        <!--<FrameLayout-->
+            <!--android:id="@+id/fragment_wode_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
 
-        </FrameLayout>
+        <!--</FrameLayout>-->
+
+        <!--<com.qingsi.qingsi.view.NoScrollViewPager-->
+            <!--android:id="@+id/fragment_wode_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+        <!--</com.qingsi.qingsi.view.NoScrollViewPager>-->
     </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
