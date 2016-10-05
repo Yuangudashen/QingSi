@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="com.qingsi.qingsi.base.MainActivity">
 
     <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
@@ -32,13 +31,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/theme_bg">
+        android:background="#9400D3">
 
         <ImageView
+            android:id="@+id/goback_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:src="@drawable/goback" />
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:src="@drawable/goback"/>
 
         <TextView
             android:id="@+id/page_title"
@@ -48,7 +50,7 @@
             android:text="标题"
             android:textColor="#ffffffff"
             android:textSize="25dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <FrameLayout
@@ -59,112 +61,35 @@
 
     </FrameLayout>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:background="@drawable/theme_bg"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:gravity="center">-->
+    <!--底部导航-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#9400D3"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <!--<RadioGroup-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:gravity="center"-->
-            <!--android:orientation="horizontal">-->
+        <RadioButton
+            android:id="@+id/radioButton_tuijian"
+            style="@style/ButtomRadioButtonStyle"
+            android:drawableBottom="@drawable/buttom_navigation_tuijian" />
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/radioButton_tuijian"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_marginBottom="10dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:button="@null"-->
-                <!--android:drawableBottom="@drawable/buttom_navigation_tuijian"-->
-                <!--android:gravity="top|center_horizontal" />-->
+        <RadioButton
+            android:id="@+id/radioButton_siyu"
+            style="@style/ButtomRadioButtonStyle"
+            android:drawableBottom="@drawable/buttom_navigation_siyu" />
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/radioButton_fujin"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_marginBottom="10dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:button="@null"-->
-                <!--android:drawableBottom="@drawable/buttom_navigation_fujin"-->
-                <!--android:gravity="top|center_horizontal" />-->
+        <RadioButton
+            android:id="@+id/radioButton_fujin"
+            style="@style/ButtomRadioButtonStyle"
+            android:drawableBottom="@drawable/buttom_navigation_fujin" />
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/radioButton_siyu"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_marginBottom="10dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:button="@null"-->
-                <!--android:drawableBottom="@drawable/buttom_navigation_siyu"-->
-                <!--android:gravity="top|center_horizontal" />-->
-
-            <!--<RadioButton-->
-                <!--android:id="@+id/radioButton_wode"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_marginBottom="10dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:button="@null"-->
-                <!--android:drawableBottom="@drawable/buttom_navigation_wode"-->
-                <!--android:gravity="top|center_horizontal" />-->
-        <!--</RadioGroup>-->
-    <!--</LinearLayout>-->
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-
-            android:background="@drawable/theme_bg"
-            android:orientation="horizontal">
-
-
-            <RadioButton
-                android:id="@+id/radioButton_tuijian"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawableBottom="@drawable/buttom_navigation_tuijian"
-                android:gravity="top" />
-
-            <RadioButton
-                android:id="@+id/radioButton_siyu"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawableBottom="@drawable/buttom_navigation_siyu"
-                android:gravity="top" />
-
-            <RadioButton
-                android:id="@+id/radioButton_fujin"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawableBottom="@drawable/buttom_navigation_fujin"
-                android:gravity="top" />
-
-            <RadioButton
-                android:id="@+id/radioButton_wode"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawableBottom="@drawable/buttom_navigation_wode"
-                android:gravity="top" />
-        </RadioGroup>
+        <RadioButton
+            android:id="@+id/radioButton_wode"
+            style="@style/ButtomRadioButtonStyle"
+            android:drawableBottom="@drawable/buttom_navigation_wode" />
+    </RadioGroup>
 
 
 </LinearLayout>
