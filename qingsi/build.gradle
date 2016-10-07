@@ -29,4 +29,5 @@ dependencies {
     compile project(':pulltorefresh')
     compile files('src/main/jniLibs/fastjson-1.2.17.jar')
     compile files('src/main/jniLibs/picasso-2.5.2.jar')
+    compile files('src/main/jniLibs/BaiduLBS_Android.jar')
 }

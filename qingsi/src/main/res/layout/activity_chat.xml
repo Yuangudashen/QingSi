@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qingsi.qingsi.siyu.ChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#9400D3">
+
+        <ImageView
+            android:id="@+id/imageView_chat_title_back"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:src="@drawable/goback" />
+
+        <TextView
+            android:id="@+id/textView_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="联系人姓名"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView_chat_title_more"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/bottom_chat_more" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listView_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#9400D3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_voice"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/bottom_chat_voice"
+            android:onClick="sendVoice" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp">
+
+            <EditText
+                android:id="@+id/editText_chat_contont"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chat_item_bg_send" />
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:onClick="send"
+                android:text="发送"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_speack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E3E3E3"
+                android:text="长按一下开始录音"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/button_more"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bottom_chat_jiahao" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone">
+
+        <GridView
+            android:id="@+id/gridView_bottom_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4"></GridView>
+    </RelativeLayout>
+
+</LinearLayout>

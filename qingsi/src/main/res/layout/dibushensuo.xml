@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center_vertical"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:id="@+id/fujin_button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/lift" />
+
+        <Button
+
+            android:id="@+id/fujin_button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+
+        android:visibility="gone">
+
+        <TextView
+
+            android:id="@+id/fujin_textView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#A475C5"
+            android:clickable="true"
+            android:onClick="change"
+            android:gravity="center"
+            android:text="摇一摇"
+            android:textSize="30sp" />
+
+        <TextView
+
+            android:id="@+id/fujin_textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="change"
+            android:background="#A475C5"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="附近聚会"
+            android:textSize="30sp" />
+    </LinearLayout>
+</LinearLayout>

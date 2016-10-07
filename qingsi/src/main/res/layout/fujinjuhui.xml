@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fujinjuhui"
+    android:orientation="vertical"
+    android:scaleType="fitXY">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A2A2A2" />
+
+            <TextView
+                android:id="@+id/fujinjuhui_textView1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:text="我要加入"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <include layout="@layout/fujinjuhui_listview1"></include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A2A2A2" />
+
+            <TextView
+                android:id="@+id/fujinjuhui_textView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="我要发起"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <include layout="@layout/fujinjuhui_listview2"></include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A2A2A2" />
+
+            <TextView
+                android:id="@+id/fujinjuhui_textView3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="我的邀请"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <include layout="@layout/fujinjuhui_listview3"></include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A2A2A2" />
+
+            <TextView
+                android:id="@+id/fujinjuhui_textView4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="我的历史"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <include layout="@layout/fujinjuhui_listview4"></include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A2A2A2" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_time_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="时间"
+        android:textSize="12sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_time_send"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:id="@+id/imageView_chat_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView_content_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/imageView_chat_send"
+            android:layout_toLeftOf="@+id/imageView_chat_send"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/chat_item_bg_send"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#8B668B"
+            android:text="聊天内容" />
+    </RelativeLayout>
+</LinearLayout>

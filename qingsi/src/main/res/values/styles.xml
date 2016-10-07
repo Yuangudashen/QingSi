@@ -19,4 +19,16 @@
         <item name="android:onClick">changeFragment</item>
     </style>
 
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/siyupopup_show</item>
+        <item name="android:windowExitAnimation">@anim/siyupopup_gone</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog" type="text/css">
+        <item name="android:background">#de99e1</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
 </resources>
