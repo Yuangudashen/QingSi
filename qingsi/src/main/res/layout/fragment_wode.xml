@@ -17,12 +17,7 @@
             android:orientation="vertical">
 
         </LinearLayout>
-        <!--<FrameLayout-->
-            <!--android:id="@+id/fragment_wode_content"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
 
-        <!--</FrameLayout>-->
 
         <!--<com.qingsi.qingsi.view.NoScrollViewPager-->
             <!--android:id="@+id/fragment_wode_content"-->

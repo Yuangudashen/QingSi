@@ -1,1 +1,1 @@
-include ':qingsi'
+include ':qingsi', ':pulltorefresh', ':testm'

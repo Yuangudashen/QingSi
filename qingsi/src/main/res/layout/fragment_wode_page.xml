@@ -138,6 +138,8 @@
             android:layout_weight="8"
             android:orientation="vertical">
 
+            <include layout="@layout/view_jiange_horizontal_2"/>
+
             <RelativeLayout
                 android:id="@+id/guanzhu_info"
                 android:layout_width="match_parent"
@@ -167,6 +169,7 @@
                     android:src="@drawable/ic_goto_gray"/>
 
             </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
             <RelativeLayout
                 android:id="@+id/fensi_info"
                 android:layout_width="match_parent"
@@ -195,11 +198,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_goto_gray"/>
             </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#55ADADB0"/>
+            <include layout="@layout/view_jiange_horizontal_2"/>
 
             <RelativeLayout
                 android:id="@+id/qianbao_info"
@@ -229,6 +228,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_goto_gray"/>
             </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
 
             <RelativeLayout
                 android:id="@+id/youxizhongxin_info"
@@ -258,6 +258,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_goto_gray"/>
             </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
 
             <RelativeLayout
                 android:id="@+id/fujinhuodong_info"
@@ -287,6 +288,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_goto_gray"/>
             </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
 
             <RelativeLayout
                 android:id="@+id/biaoqingzhuangban_info"
@@ -316,6 +318,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_goto_gray"/>
             </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
 
             <RelativeLayout
                 android:id="@+id/tongchengjiaoliu_info"
@@ -345,11 +348,7 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_goto_gray"/>
             </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#55ADADB0"/>
+            <include layout="@layout/view_jiange_horizontal_2"/>
 
             <RelativeLayout
                 android:id="@+id/shezhi_info"

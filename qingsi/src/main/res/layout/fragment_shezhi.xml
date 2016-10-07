@@ -1,11 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="设置"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/fragment_shezhi_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/shezhi_zhanghaoguanli_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="账号管理" />
+
+                <ImageView
+                    android:id="@+id/ic_goto_gray_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+                <ImageView
+                    android:id="@+id/shezhi_myheadIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ic_goto_gray_1"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/ic_launcher"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
+
+            <RelativeLayout
+                android:id="@+id/shezhi_shoujihaoma_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="手机号码" />
+
+                <ImageView
+                    android:id="@+id/ic_goto_gray_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+                <TextView
+                    android:id="@+id/shezi_my_telNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ic_goto_gray_2"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:text="152******74"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
+
+            <RelativeLayout
+                android:id="@+id/shezhi_wodedenglu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="我的登录" />
+
+                <ImageView
+                    android:id="@+id/ic_goto_gray_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+                <TextView
+                    android:id="@+id/shezi_my_lognin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ic_goto_gray_3"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:text="已登录320天"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_2"/>
+
+            <RelativeLayout
+                android:id="@+id/shezhi_xiaoxitongzhi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="消息通知" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_jiange_horizontal_1"/>
+            <RelativeLayout
+                android:id="@+id/shezhi_liaotianjilu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="聊天记录" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_2"/>
+
+            <RelativeLayout
+                android:id="@+id/shezhi_yinsibaohu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="隐私保护" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
+
+            <RelativeLayout
+                android:id="@+id/shezhi_shebeisuo_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="设备锁" />
+
+                <ImageView
+                    android:id="@+id/ic_goto_gray_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+                <TextView
+                    android:id="@+id/shezi_isopen_shebeisuo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ic_goto_gray_4"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:text="未开启"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_jiange_horizontal_1"/>
+
+            <RelativeLayout
+                android:id="@+id/shezh_fuzhugongneng_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="辅助功能" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_1"/>
+
+            <RelativeLayout
+                android:id="@+id/shezh_bangzgu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="帮助" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+            </RelativeLayout>
+            <include layout="@layout/view_jiange_horizontal_2"/>
+
+            <RelativeLayout
+                android:id="@+id/shezh_guanyu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="关于" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_goto_gray"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

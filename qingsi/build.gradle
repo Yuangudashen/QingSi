@@ -26,4 +26,7 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
     compile files('src/main/jniLibs/hyphenatechat_3.1.5.jar')
+    compile project(':pulltorefresh')
+    compile files('src/main/jniLibs/fastjson-1.2.17.jar')
+    compile files('src/main/jniLibs/picasso-2.5.2.jar')
 }
