@@ -5,8 +5,8 @@ android {
     buildToolsVersion "24.0.3"
 
     defaultConfig {
-        applicationId "com.qingsi.qingsi"
-        minSdkVersion 14
+        applicationId "com.bwb.administrator.testi"
+        minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -19,22 +19,9 @@ android {
     }
 }
 
-repositories {
-
-    flatDir {
-        dirs 'jniLibs'
-    }
-}
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
-    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
-    compile files('src/main/jniLibs/hyphenatechat_3.1.5.jar')
-    compile project(':pulltorefresh')
-    compile files('src/main/jniLibs/fastjson-1.2.17.jar')
-    compile files('src/main/jniLibs/picasso-2.5.2.jar')
-    compile files('src/main/jniLibs/BaiduLBS_Android.jar')
+    compile files('libs/android-gif-drawable-1.2.2-sources.jar')
 }

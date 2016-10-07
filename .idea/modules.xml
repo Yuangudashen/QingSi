@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/QingSi.iml" filepath="$PROJECT_DIR$/QingSi.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/qingsi/qingsi.iml" filepath="$PROJECT_DIR$/qingsi/qingsi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testi/testi.iml" filepath="$PROJECT_DIR$/testi/testi.iml" />
     </modules>
   </component>
 </project>

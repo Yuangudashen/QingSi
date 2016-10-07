@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 设置根据View的不同状态设置不同的图片，
+    每个item标签设置一种状态以及该状态下对应的图片 -->
+    
+    <item android:state_pressed="true" 
+        android:drawable="@drawable/ic_guide_btn_pressed"></item>
+    <item android:state_pressed="false" 
+        android:drawable="@drawable/ic_guide_btn_normal"></item>
+    
+    <!-- 如果以上状态均不满足显示该图片
+    注意：默认的item必须作为最后一个item出现
+     -->
+     <item android:drawable="@drawable/ic_guide_btn_normal"></item>
+
+</selector>
