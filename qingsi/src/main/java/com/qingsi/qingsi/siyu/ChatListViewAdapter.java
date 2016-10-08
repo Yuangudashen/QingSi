@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qingsi.qingsi.R;
+import com.qingsi.qingsi.entity.MessageEntity;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class ChatListViewAdapter extends BaseAdapter {
     List<MessageEntity> list_message;
+    String path = "http://img5.imgtn.bdimg.com/it/u=4123622897,2468982496&fm=21&gp=0.jpg";
 
     public ChatListViewAdapter(List<MessageEntity> list_message) {
         this.list_message = list_message;
@@ -56,6 +58,7 @@ public class ChatListViewAdapter extends BaseAdapter {
                 vh.time_receive = (TextView) convertView.findViewById(R.id.textView_time_receive);
             }else if (type == MessageEntity.MESAGE_TYPE_SEND_voice){
                 convertView = View.inflate(parent.getContext(), R.layout.chat_item_send_voice,null);
+                vh.img_send_voice_pic = (ImageView) convertView.findViewById(R.id.imageView_chat_send_voice);
                 vh.time_send_voice = (TextView) convertView.findViewById(R.id.textView_time_send_voice);
                 vh.length_send_voice = (TextView) convertView.findViewById(R.id.textView_chat_send_voice_length);
             }else if(type == MessageEntity.MESAGE_TYPE_receive_voice){
@@ -64,8 +67,8 @@ public class ChatListViewAdapter extends BaseAdapter {
                 vh.length_receive_voice = (TextView) convertView.findViewById(R.id.textView_chat_receive_voice_length);
             } else if (type == MessageEntity.MESAGE_TYPE_SEND_img){
                 convertView = View.inflate(parent.getContext(), R.layout.chat_item_send_img,null);
+                vh.img_send_img_pic = (ImageView)convertView.findViewById(R.id.imageView_chat_send_img);
                 vh.time_send_img = (TextView) convertView.findViewById(R.id.textView_time_send_img);
-
                 vh.img_send_img = (ImageView) convertView.findViewById(R.id.imageView_img_send);
 
             }else if (type == MessageEntity.MESAGE_TYPE_receive_img){
@@ -82,13 +85,31 @@ public class ChatListViewAdapter extends BaseAdapter {
             //picasso
             vh.content_send.setText(list_message.get(position).text);
 
+            Picasso.with(parent.getContext())
+                    .load(path)
+                    .resize(50,50)
+                    .centerCrop()
+                    .error(R.mipmap.ic_launcher)
+                    .into(vh.img_send);
+
         }else if (type == MessageEntity.MESAGE_TYPE_RESEIVE){
             vh.time_receive.setText(list_message.get(position).date);
-            //picasso
+            Picasso.with(parent.getContext())
+                    .load(list_message.get(position).contact.imgHeadPath)
+                    .resize(50,50)
+                    .centerCrop()
+                    .error(R.mipmap.ic_launcher)
+                    .into(vh.img_receive);
             vh.content_receive.setText(list_message.get(position).text);
         }else if(type == MessageEntity.MESAGE_TYPE_SEND_voice){
             vh.time_send_voice.setText(list_message.get(position).date);
             vh.length_send_voice.setText(list_message.get(position).voiceLength);
+            Picasso.with(parent.getContext())
+                    .load(path)
+                    .resize(50,50)
+                    .centerCrop()
+                    .error(R.mipmap.ic_launcher)
+                    .into(vh.img_send_voice_pic);
         }else if (type == MessageEntity.MESAGE_TYPE_receive_voice){
             vh.time_receive_voice.setText(list_message.get(position).date);
             vh.length_receive_voice.setText(list_message.get(position).voiceLength);
@@ -98,6 +119,12 @@ public class ChatListViewAdapter extends BaseAdapter {
             /*Picasso.with(parent.getContext())
                     .load(list_message.get(position).imgFilePath)
                     .into(vh.img_send_img);*/
+            Picasso.with(parent.getContext())
+                    .load(path)
+                    .resize(50,50)
+                    .centerCrop()
+                    .error(R.mipmap.ic_launcher)
+                    .into(vh.img_send_img_pic);
             Picasso.with(parent.getContext()).load(new File(list_message.get(position).imgFilePath))
                     .resize(250,300)
                     .centerCrop()

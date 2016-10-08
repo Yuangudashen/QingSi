@@ -20,8 +20,9 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hyphenate.chat.EMClient;
 import com.qingsi.qingsi.R;
+import com.qingsi.qingsi.base.LoginActivity;
+import com.qingsi.qingsi.entity.Contact;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,13 +38,12 @@ public class FragmentSiyu extends Fragment {
     PopupWindow popupWindow;
     ContactListViewAdapter adapter;
     int itemcount;//记录当前点击的item索引
-
+    String s1;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view_siyu = inflater.inflate(R.layout.fragment_siyu_contact, null);
         initPopupWindow();
-
         initDatas();
         initViews();
         //搜索联系人的实现
@@ -124,9 +124,9 @@ public class FragmentSiyu extends Fragment {
 
     private void getContacts() {
         try {
-            List<String> usernames = EMClient.getInstance().contactManager().getAllContactsFromServer();
+            List<String> usernames = LoginActivity.usernames;
             for (int i = 0; i < usernames.size(); i++) {
-                list_contact.add(new Contact(usernames.get(i)));
+                list_contact.add(new Contact(usernames.get(i),s1));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -139,9 +139,12 @@ public class FragmentSiyu extends Fragment {
         list_contact = new ArrayList<>();
         list_search = new ArrayList<>();
         list_show = new ArrayList<>();
-        list_contact.add(new Contact("小明"));
-        list_contact.add(new Contact("小李"));
-        list_contact.add(new Contact("王二"));
+        s1 = "http://img1.imgtn.bdimg.com/it/u=1766303944,3416066551&fm=21&gp=0.jpg";
+        String s2 = "http://img0.imgtn.bdimg.com/it/u=735632901,2548206015&fm=21&gp=0.jpg";
+        String s3 = "http://img2.imgtn.bdimg.com/it/u=3153388544,229038294&fm=21&gp=0.jpg";
+        list_contact.add(new Contact("小明",s1));
+        list_contact.add(new Contact("小李",s2));
+        list_contact.add(new Contact("王二",s3));
         getContacts();
         list_show.addAll(list_contact);
     }

@@ -91,7 +91,7 @@ public class FragmentXiangce extends Fragment{
     private void initView() {
         xiangce_list = (PullToRefreshGridView) fragment_xiangce.findViewById(R.id.xiangce_list);
 
-        xiangce_list.setEmptyView(EmptyView.loadEmptyTextView(getActivity()));
+        xiangce_list.setEmptyView(EmptyView.loadLoadingView(getActivity()));
 
         xiangce_list.setMode(PullToRefreshBase.Mode.BOTH);
         xiangce_list.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<GridView>() {

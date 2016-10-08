@@ -2,24 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FF8E23C2">
 
     <WebView
         android:id="@+id/fujin_leida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-android:layout_marginLeft="80dp"
         android:layout_centerHorizontal="true"
-
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="#FF8E23C2"
+        android:foregroundGravity="center" />
 
     <LinearLayout
         android:id="@+id/leida_linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="160dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -55,8 +57,8 @@ android:layout_marginLeft="80dp"
         android:id="@+id/leida_linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="380dp"
-        android:layout_marginLeft="250dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="250dp"
         android:gravity="center"
         android:orientation="horizontal">
 

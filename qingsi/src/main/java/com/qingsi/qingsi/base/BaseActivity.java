@@ -1,20 +1,27 @@
 package com.qingsi.qingsi.base;
 
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.qingsi.qingsi.R;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaseActivity extends AppCompatActivity {
 
+    public static List<Activity> list_activitys = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_activity);
+        // setContentView(R.layout.activity_base_activity);
+//        initSystemBarTint(true, );
+//        setTranslucentStatus(true);
+        list_activitys.add(this);
 
     }
 

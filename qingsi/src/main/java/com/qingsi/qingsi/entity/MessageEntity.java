@@ -1,4 +1,4 @@
-package com.qingsi.qingsi.siyu;
+package com.qingsi.qingsi.entity;
 
 import java.io.Serializable;
 
@@ -15,7 +15,7 @@ public class MessageEntity  implements Serializable {
     public static final int MESAGE_TYPE_SEND_img = 4;
     public static final int MESAGE_TYPE_receive_img = 5;
 
-
+    public Contact contact;
     public String name;
     public String date;
 
@@ -39,15 +39,16 @@ public class MessageEntity  implements Serializable {
     public MessageEntity() {
     }
 
-    public MessageEntity(String name, String date, String text, int type) {
-        super();
+    public MessageEntity(Contact contact, String name, String date, String text, int type) {
+        this.contact = contact;
         this.name = name;
         this.date = date;
         this.text = text;
         this.type = type;
     }
 
-    public MessageEntity(String name, String date, String text, int type, String voiceLength) {
+    public MessageEntity(Contact contact, String name, String date, String text, int type, String voiceLength) {
+        this.contact = contact;
         this.name = name;
         this.date = date;
         this.text = text;
@@ -55,7 +56,8 @@ public class MessageEntity  implements Serializable {
         this.voiceLength = voiceLength;
     }
 
-    public MessageEntity(String name, String date, String text, int type, String voiceLength, String voicePath, String imgFilePath) {
+    public MessageEntity(Contact contact, String name, String date, String text, int type, String voiceLength, String voicePath, String imgFilePath) {
+        this.contact = contact;
         this.name = name;
         this.date = date;
         this.text = text;
@@ -64,4 +66,5 @@ public class MessageEntity  implements Serializable {
         this.voicePath = voicePath;
         this.imgFilePath = imgFilePath;
     }
+
 }

@@ -52,7 +52,7 @@
             android:clickable="true"
             android:onClick="change"
             android:gravity="center"
-            android:text="摇一摇"
+            android:text="附近聚会"
             android:textSize="30sp" />
 
         <TextView
@@ -65,7 +65,7 @@
             android:background="#A475C5"
             android:clickable="true"
             android:gravity="center"
-            android:text="附近聚会"
+            android:text="摇一摇"
             android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>

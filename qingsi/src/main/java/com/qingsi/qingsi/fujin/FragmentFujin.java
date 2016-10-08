@@ -2,12 +2,10 @@ package com.qingsi.qingsi.fujin;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.qingsi.qingsi.R;
-import com.qingsi.qingsi.tuijian.FragmentTuijian;
 
 import java.util.ArrayList;
-import java.util.logging.Handler;
 
 /**
  * Created by Administrator on 2016/10/3 0003.
@@ -46,8 +42,8 @@ public class FragmentFujin extends Fragment implements View.OnClickListener {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fragment0 = new leidaFragment();
-        fragment1 = new YaoyiyaoFragment();
-        fragment2 = new FujinjuhuiFragment();
+        fragment2 = new YaoyiyaoFragment();
+        fragment1 = new FujinjuhuiFragment();
         datas_fragment.add(fragment0);
         datas_fragment.add(fragment1);
         datas_fragment.add(fragment2);
@@ -60,6 +56,7 @@ public class FragmentFujin extends Fragment implements View.OnClickListener {
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         viewPager.setAdapter(new A(getChildFragmentManager()));
         viewPager.setCurrentItem(0);
+        viewPager.setOffscreenPageLimit(0);
         /*if (viewPager.getCurrentItem()==1){
             Message a= Message.obtain();
             a.what=0;
@@ -69,6 +66,7 @@ public class FragmentFujin extends Fragment implements View.OnClickListener {
         return view;
 
     }
+
     class A extends FragmentPagerAdapter {
 
         public A(FragmentManager fm) {
@@ -87,7 +85,6 @@ public class FragmentFujin extends Fragment implements View.OnClickListener {
             // TODO Auto-generated method stub
             return datas_fragment.size();
         }
-
 
 
     }
@@ -169,3 +166,4 @@ public class FragmentFujin extends Fragment implements View.OnClickListener {
 
 
 }
+

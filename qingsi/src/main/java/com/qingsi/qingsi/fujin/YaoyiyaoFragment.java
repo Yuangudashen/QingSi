@@ -36,9 +36,18 @@ public class YaoyiyaoFragment extends Fragment implements SensorEventListener{
     private LinearLayout topLayout, bottomLayout;
     private ImageView topLineIv, bottomLineIv;
     private boolean isShake = false;
+    private View view;
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+      sp.stop(AudioManager.STREAM_MUSIC);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = container.inflate(getActivity(), R.layout.yaoyiyao, null);
+        view = container.inflate(getActivity(), R.layout.yaoyiyao, null);
 
          //初始化播放器--soundPool主要用于播放短声音，比mediaplayer耗费的资源少
         sp = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);

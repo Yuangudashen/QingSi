@@ -2,7 +2,6 @@ package com.qingsi.qingsi.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -10,15 +9,19 @@ import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
 import com.qingsi.qingsi.R;
+
+import java.util.List;
 
 /**
  * 登录Aactivity
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
 
     EditText editText_userName;
     EditText editText_passWord;
+    public static List<String> usernames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +84,11 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess() {
                     Log.i("TAG", "登陆成功！" + "----onSuccess:" + userName);
-
+                    try {
+                        usernames = EMClient.getInstance().contactManager().getAllContactsFromServer();
+                    } catch (HyphenateException e) {
+                        e.printStackTrace();
+                    }
                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
                     startActivity(intent);
                 }

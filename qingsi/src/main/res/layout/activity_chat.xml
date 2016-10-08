@@ -82,9 +82,10 @@
             <Button
                 android:id="@+id/button_send"
                 android:layout_width="60dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:onClick="send"
+                android:background="#FFFF00FF"
                 android:text="发送"
                 android:textSize="12sp" />
 
@@ -92,10 +93,12 @@
                 android:id="@+id/button_speack"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E3E3E3"
+                android:background="#FFFF00FF"
                 android:text="长按一下开始录音"
                 android:visibility="gone" />
         </FrameLayout>
+
+        <!--android:background="#E3E3E3"-->
 
         <Button
             android:id="@+id/button_more"

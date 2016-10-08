@@ -35,6 +35,8 @@ import com.hyphenate.chat.EMMessage;
 import com.qingsi.qingsi.R;
 import com.qingsi.qingsi.base.BaseActivity;
 import com.qingsi.qingsi.base.MainActivity;
+import com.qingsi.qingsi.entity.Contact;
+import com.qingsi.qingsi.entity.MessageEntity;
 import com.qingsi.qingsi.utils.FormateDateUtil;
 
 import java.io.File;
@@ -56,7 +58,7 @@ public class ChatActivity extends BaseActivity {
     MediaRecorder mediaRecorder;
     RecorderDialog dialog;
     RecorderDialog2.Builder builder;
-    Contact contactChat;
+    Contact contactChat;//传过来的聊天对象
     EditText editText_contont;
     long startRecorderTime, endRecorderTime;
     ChatListViewAdapter chatAdapter;
@@ -139,7 +141,7 @@ public class ChatActivity extends BaseActivity {
                     String messageTimeStr = null;
                     EMMessage.Type type = messages.get(j).getType();
                     if (EMMessage.Type.TXT.equals(type)){
-                        list_chat.add(new MessageEntity(contactChat.name,messageTimeStr, messages.get(j).getBody().toString(), MessageEntity.MESAGE_TYPE_RESEIVE));
+                        list_chat.add(new MessageEntity(contactChat,contactChat.name,messageTimeStr, messages.get(j).getBody().toString(), MessageEntity.MESAGE_TYPE_RESEIVE));
                         chatAdapter.notifyDataSetChanged();
                     }else if (EMMessage.Type.IMAGE.equals(type)){
 //                        list_chat.add(new MessageEntity(contactChat.name,messageTimeStr, messages.get(j).getBody().toString(), MessageEntity.MESAGE_TYPE_receive_img));
@@ -270,13 +272,13 @@ public class ChatActivity extends BaseActivity {
                 @RequiresApi(api = Build.VERSION_CODES.N)
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
-                    list_chat.add(new MessageEntity(contactChat.name, FormateDateUtil.formateDateGetString(new Date()), null, MessageEntity.MESAGE_TYPE_SEND_img, null, null, cmeraImgFilePath));
+                    list_chat.add(new MessageEntity(contactChat,contactChat.name, FormateDateUtil.formateDateGetString(new Date()), null, MessageEntity.MESAGE_TYPE_SEND_img, null, null, cmeraImgFilePath));
                     chatAdapter.notifyDataSetChanged();
                     cmeraImgFilePath = null;
                     view_bottom.setVisibility(View.GONE);
                     //imagePath为图片本地路径，false为不发送原图（默认超过100k的图片会压缩后发给对方），需要发送原图传true
-                    EMMessage message = EMMessage.createImageSendMessage(cmeraImgFilePath, false, contactChat.name);
-                    EMClient.getInstance().chatManager().sendMessage(message);
+//                    EMMessage message = EMMessage.createImageSendMessage(cmeraImgFilePath, false, contactChat.name);
+//                    EMClient.getInstance().chatManager().sendMessage(message);
                 }
             });
 
@@ -299,10 +301,11 @@ public class ChatActivity extends BaseActivity {
 
     private void initDatas() {
         list_chat = new ArrayList<>();
-        list_chat.add(new MessageEntity("1", "12", "nihao", MessageEntity.MESAGE_TYPE_RESEIVE));
-        list_chat.add(new MessageEntity("1", "12", "nihao", MessageEntity.MESAGE_TYPE_RESEIVE));
-        list_chat.add(new MessageEntity("1", "12", "nihao", MessageEntity.MESAGE_TYPE_SEND));
-        list_chat.add(new MessageEntity("1", "12", "", MessageEntity.MESAGE_TYPE_SEND_voice, "12"));
+        //Contact contact, String name, String date, String text, int type, String voiceLength, String voicePath, String imgFilePath
+        list_chat.add(new MessageEntity(contactChat,"1", FormateDateUtil.formateDateGetString(new Date()), "你好", MessageEntity.MESAGE_TYPE_RESEIVE));
+        list_chat.add(new MessageEntity(contactChat,"1", FormateDateUtil.formateDateGetString(new Date()), "hi，你好", MessageEntity.MESAGE_TYPE_RESEIVE));
+        list_chat.add(new MessageEntity(contactChat,"1", FormateDateUtil.formateDateGetString(new Date()), "hi，你好", MessageEntity.MESAGE_TYPE_SEND));
+        // list_chat.add(new MessageEntity(contactChat,"1", FormateDateUtil.formateDateGetString(new Date()), "", MessageEntity.MESAGE_TYPE_SEND_voice, "12"));
     }
 
     private void initbottom() {
@@ -388,7 +391,7 @@ public class ChatActivity extends BaseActivity {
         //获取当前时间
         Date date = new Date();
         String dateStr = FormateDateUtil.formateDateGetString(date);
-        list_chat.add(new MessageEntity(contactChat.name, dateStr, content, MessageEntity.MESAGE_TYPE_SEND));
+        list_chat.add(new MessageEntity(contactChat,contactChat.name, dateStr, content, MessageEntity.MESAGE_TYPE_SEND));
         chatAdapter.notifyDataSetChanged();
         editText_contont.setText(null);
         //隐藏键盘
